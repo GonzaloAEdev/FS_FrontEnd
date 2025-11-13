@@ -1,0 +1,31 @@
+:root {
+    --nav-width: 250px;
+}
+
+nav {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: var(--nav-width);
+    background-color: var(--bs-primary);
+}
+
+.nav-link i {
+    font-size: 1.2rem;
+}
+
+.nav-link:hover {
+    background-color: rgba(255, 255, 255, .1);
+}
+
+.active {
+    border-left: 2px solid var(--bs-light);
+    background-color: rgba(255, 255, 255, .1);
+}
+
+main {
+    margin-left: var(--nav-width);
+    min-height: 100vh;
+    width: calc(100vw - var(--nav-width));
+}

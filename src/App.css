@@ -1,0 +1,16 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+select {
+    cursor: pointer
+}
+
+textarea:focus,
+select:focus,
+button:focus,
+input:focus {
+    box-shadow: none !important;
+}
