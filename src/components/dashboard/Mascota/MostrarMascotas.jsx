@@ -1,5 +1,3 @@
-
-
 const MostrarMascotas = props => {
     if (props.mascotas.length === 0) {
         return (<h4 className='text-center'>Todavía no hay mascotas registradas</h4>)
@@ -24,10 +22,15 @@ const MostrarMascotas = props => {
                         <td>{mascota.categoria.nombre}</td>
                         <td>
                             <button className="btn"><i className="bi bi-pencil"></i></button>
-                            <button className="btn" onClick={() => props.handleDelete(mascota._id, mascota.nombre)} disabled={props.eliminado === mascota._id}>
-                                                            {
-                                {props.eliminado === mascota._id ? (<> <span className="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> </>) : (<> <i className="bi bi-trash"></i> </>)}
-                            }
+                            <button className="btn" onClick={() => props.handleDelete(mascota._id, mascota.nombre)} disabled={props.eliminado}>
+                                {props.eliminado === mascota._id ? (
+                                    <>
+                                        <span className="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                                        Eliminando...
+                                    </>
+                                ) : (
+                                    'Eliminar'
+                                )}
                             </button>
                         </td>
                     </tr>
