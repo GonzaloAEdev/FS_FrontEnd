@@ -102,11 +102,11 @@ const EditarPerfil = (props) => {
 
                     <button type="submit" className="btn btn-primary w-100" disabled={cargando}>
                         {cargando ? (
-                                                    {
-                            <> <span className="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Guardando... </>
-                        }
+                            <span className="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
                         ) : (
-                            <> <i className="bi bi-check-circle"></i> Guardar cambios </>
+                            <>
+                                <i className="bi bi-check-circle"></i> Guardar cambios
+                            </>
                         )}
                     </button>
                 </form>

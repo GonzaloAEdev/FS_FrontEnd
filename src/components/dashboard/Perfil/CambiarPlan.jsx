@@ -106,13 +106,14 @@ const CambiarPlan = (props) => {
                                 })}
                             />
 
-                            <button type="submit" className="btn btn-warning w-100" disabled={cargando}>
+                            <button className="btn btn-primary" type="submit" disabled={cargando}>
                                 {cargando ? (
-                                                                    {
-                                    <> <span className="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Procesando... </>
-                                }
+                                    <>
+                                        <span className="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                                        Cargando...
+                                    </>
                                 ) : (
-                                    <> <i className="bi bi-star-fill"></i> Actualizar a Premium </>
+                                    'Cambiar Plan'
                                 )}
                             </button>
                         </form>

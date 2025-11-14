@@ -104,11 +104,11 @@ const EditarPassword = () => {
 
                     <button type="submit" className="btn btn-primary w-100" disabled={cargando}>
                         {cargando ? (
-                                                    {
-                            <> <span className="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Actualizando... </>
-                        }
+                            <span className="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
                         ) : (
-                            <> <i className="bi bi-check-circle"></i> Actualizar contraseña </>
+                            <>
+                                <i className="bi bi-key"></i> Cambiar contraseña
+                            </>
                         )}
                     </button>
                 </form>

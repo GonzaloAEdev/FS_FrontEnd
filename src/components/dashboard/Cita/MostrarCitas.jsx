@@ -1,5 +1,3 @@
-
-
 const MostrarCitas = props => {
     if (props.citas.length === 0) {
         return (<h4 className='text-center'>Todavía no hay citas agendadas</h4>)
@@ -23,10 +21,15 @@ const MostrarCitas = props => {
                         <td className="text-truncate" style={{ maxWidth: '200px' }} title={cita.motivo}>{cita.motivo}</td>
                         <td>{cita.estado}</td>
                         <td>
-                            <button className="btn btn-danger btn-sm" onClick={() => props.handleDelete(cita._id, cita.mascota.nombre)} disabled={props.eliminado === cita._id || cita.estado === 'cancelada' || cita.estado === 'finalizada'}>
-                                                            {
-                                {props.eliminado === cita._id ? (<> <span className="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> </>) : ('Cancelar')}
-                            }
+                            <button className="btn btn-danger btn-sm" onClick={() => props.handleDelete(cita._id, cita.fecha)}>
+                                {props.eliminado === cita._id ? (
+                                    <>
+                                        <span className="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                                        Eliminando...
+                                    </>
+                                ) : (
+                                    'Eliminar'
+                                )}
                             </button>
                         </td>
                     </tr>
